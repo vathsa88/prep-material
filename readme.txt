@@ -1,1 +1,1 @@
-first readme
+Interview preparation - consolidated material
