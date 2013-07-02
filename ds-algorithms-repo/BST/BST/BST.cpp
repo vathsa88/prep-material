@@ -33,11 +33,13 @@ struct TreeNode {
     :_key(inKey)
     ,_pLeft(NULL)
     ,_pRight(NULL)
+    ,count (0)
   {
   }
   Key _key;
   TreeNode* _pLeft;
   TreeNode* _pRight;
+  int count;
 };
 template <class Key>
 class BSTSymbolTable {
@@ -60,6 +62,13 @@ public:
   {
   }
 private:
+  int size (TreeNode<Key>* node){
+    if (node == NULL){
+      return 0;
+    }
+    return node->count;
+  }
+private:
   TreeNode<Key>* put (TreeNode<Key>* node, Key& key)
   {
     if (node == NULL){
@@ -73,6 +82,8 @@ private:
         node->_pRight = put (node->_pRight, key);
       }
     }
+
+    node->count = 1 + size(node->_pLeft) + size(node->_pRight);
     return node;
   }
 
@@ -89,7 +100,24 @@ private:
     else
       return node;
   }
+private:
+  int rank (TreeNode<Key>* node, Key& key)
+  {
+    if (node == NULL)
+      return -1;
 
+    int nRet = node->_key.compare(key);
+    if (0 == nRet){
+      return node->count;
+    }else if (nRet < 0){
+      //node key is greater than inKey
+      return rank (node->_pLeft,key);
+    }else{
+      //node key is less than inKey
+      return 1 + size(node->_pLeft) + rank (node->_pRight,key);
+    }
+
+  }
 public:
   void put ( Key& key)
   {
@@ -114,6 +142,11 @@ public:
        return record;
   }
 
+  int rank (Key& key)
+  {
+
+    return 
+  }
 private:
   TreeNode<Key>* inorder_successor(TreeNode<Key>* node, Key& key) {
     if (node == NULL)
@@ -241,7 +274,7 @@ public:
 
   void remove (Key& key)
   {
-    remove(_pRoot,key);
+    //remove(_pRoot,key);
   }
 
 private:
