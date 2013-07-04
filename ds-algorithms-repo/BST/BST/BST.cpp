@@ -178,88 +178,67 @@ private:
     return nextNode;
   }
 
-  //TreeNode<Key>* remove (TreeNode<Key>* node, Key& key)
-  //{
-  //  if (node == NULL)
-  //    return NULL;
-  //  int nRet = node->_key.compare(key);
-  //  
-  //  TreeNode<Key>* nodeToDelete = NULL;
-  //  
-  //  if (nRet == 0){
-  //    nodeToDelete = node;
-  //    return nodeToDelete;
-  //  }else if (nRet < 0){
-  //    nodeToDelete = remove (node->_pLeft, key);
-  //  }else {
-  //    nodeToDelete = remove (node->_pRight, key);
-  //  }
+  TreeNode<Key>* remove (TreeNode<Key>* node, Key& key)
+  {
+    if (node == NULL)
+      return NULL;
+    int nRet = node->_key.compare(key);
+    
+    TreeNode<Key>* nodeToDelete = NULL;
+    
+    if (nRet == 0){
+      nodeToDelete = node;
+    }else if (nRet < 0){
+      node->_pLeft = remove (node->_pLeft, key);
+    }else {
+      node->_pRight = remove (node->_pRight, key);
+    }
 
-  //  if (nodeToDelete){
-  //    int nChildCase = 0;
-  //    if (nodeToDelete->_pLeft){
-  //      nChildCase = nChildCase | 1;
-  //    }
+    if (nodeToDelete){
 
-  //    if (nodeToDelete->_pRight){
-  //      nChildCase = nChildCase | 2;
-  //    }
+      int nChildCase = 0;
+      if (nodeToDelete->_pLeft){
+        nChildCase = nChildCase | 1;
+      }
 
-  //    switch (nChildCase) {
-  //      case 0:
-  //        {
-  //          if (node->_pLeft == nodeToDelete)
-  //            node->_pLeft = NULL;
-  //          else
-  //            node->_pRight = NULL;
+      if (nodeToDelete->_pRight){
+        nChildCase = nChildCase | 2;
+      }
 
-  //          delete nodeToDelete;
-  //          nodeToDelete = NULL;
-  //        }break;
-  //      case 1: // only left child
-  //        {
-  //          if (node->_pLeft == nodeToDelete)
-  //            node->_pLeft = nodeToDelete->_pLeft;
-  //          else
-  //            node->_pRight = nodeToDelete->_pLeft;
+      switch (nChildCase) {
+        case 0:
+          {
+            delete nodeToDelete;
+            return NULL;
+          }break;
+        case 1: // only left child
+          {            
+            TreeNode<Key>* retNode = nodeToDelete->_pLeft;
+            delete nodeToDelete;
+            return retNode;
+          }break;
+        case 2:// only rt child
+          {
+            TreeNode<Key>* retNode = nodeToDelete->_pRight;
+            delete nodeToDelete;
+            return retNode;
 
-  //          if (nodeToDelete == _pRoot){
-  //            _pRoot = nodeToDelete->_pLeft;
-  //          }
+          }break;
+        case 3:// both left and right child
+          {
+            TreeNode<Key>* _pNextNode = inorder_successor(nodeToDelete,nodeToDelete->_key);
+            //nodeToDelete->_key = _pNextNode->_key;
+            //remove(nodeToDelete->_pRight,nodeToDelete->_key);
+            //
+            ////copy contents of _pNextNode into nodeToDelete
+            ////delete _pNextNode
 
-  //          delete nodeToDelete;
-  //          nodeToDelete = NULL;
+          }break;
+      }
+    }
 
-  //        }break;
-  //      case 2:// only rt child
-  //        {
-  //          if (node->_pLeft == nodeToDelete)
-  //            node->_pLeft = nodeToDelete->_pRight;
-  //          else
-  //            node->_pRight = nodeToDelete->_pRight;
-
-  //          if (nodeToDelete == _pRoot){
-  //            _pRoot = nodeToDelete->_pRight;
-  //          }
-
-  //          delete nodeToDelete;
-  //          nodeToDelete = NULL;
-
-  //        }break;
-  //      case 3:// both left and right child
-  //        {
-  //          TreeNode<Key>* _pNextNode = inorder_successor(node,nodeToDelete->_key);
-  //          nodeToDelete->_key = _pNextNode->_key;
-  //          remove(nodeToDelete->_pRight,nodeToDelete->_key);
-  //          
-  //          //copy contents of _pNextNode into nodeToDelete
-  //          //delete _pNextNode
-  //        }break;
-  //    }
-  //  }
-
-  //  return nodeToDelete;
-  //}
+    return nodeToDelete;
+  }
 
 public:
   BSTRecord next ( Key& key)
