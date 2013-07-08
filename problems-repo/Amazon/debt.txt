@@ -1,0 +1,34 @@
+Set 2
+There is a N*N integer matrix Arr[N][N]. From the row r and column c, we can go to any of the following three indices:
+
+I.                Arr[ r+1 ][ c-1 ] (valid only if c-1>=0)
+
+II.               Arr[ r+1 ][ c ]
+
+III.              Arr[ r+1 ][ c+1 ] (valid only if c+1<=N-1)
+
+So if we start at any column index on row 0, what is the largest sum of any of the paths till row N-1.
+
+
+Set 2
+
+Paranthesis checker
+
+Set 2
+
+Two robots land with their parachutes on an infinite one-dimensional number line. They both release their parachutes as soon as they land and start moving. They are allowed only to make use of the following functions.
+
+I.                 moveLeft() // robot moves to left by 1 unit in 1 unit time
+
+II.               moveRight() // robot moves to right by 1 unit in 1 unit time
+
+III.              noOperation() // robot does not move and takes 1 unit time
+
+IV.              onTopOfParachute() // returns true if the robot is standing on top of either of the parachute, else false
+
+V.               didWeMeet() // returns true if the robot meets to the other robot, else false
+
+Set 3
+
+Add linked lists (recursive)
+
