@@ -32,3 +32,282 @@ Set 3
 
 Add linked lists (recursive)
 
+Set 4
+
+Question 2:- Given a Binary tree and two nodes. Need to find smallest path between them. LCA
+
+Set 5
+
+Find diameter of a tree. Calculate complexities of recursive functions
+
+Merge 2 linked lists
+
+random shuffle
+
+permutations (recursion/backtracking)
+
+find islands
+
+Set 6
+Construct a tree from ancestor matrix. The main thing he wanted to check was use of binary search.
+Given a Binary tree (not the BST) , Produce the Ancestor matrix
+
+
+set 7
+An array of size n is given. The array contains digits from 0 to 9. I had to generate the maximum number using the digits in the array such that it is divisible by 2, 3 and 5
+eg: 1 array = 18760, output must be: 8160
+eg: 2 array = 7776, output must be: “no number can be formed”
+[discussion went for more than 35 minutes. Every time i gave a solution, he was adding the constraints and finally i did it. he was ok with it.]
+pythagorean triplets - optimal solution
+
+
+
+Set 30
+
+Binary Search tree along with the parent pointer, find the next largest node for the given node
+
+ Given a String, remove the duplicates in the string.
+….a. Lot of variations from the same problem.
+….b. Asked for a solution in different time and space complexities and the complications involved.
+….c. I guess the communication skill might have been tested here.
+
+
+Given a Binary tree, connect all the leaf nodes in the form of a doubly linked list. Don’t use extra space.
+
+next largest integer using the same digits as in the given integer
+
+binary tree print the elements in a zig zag 
+
+Set 31
+
+ Find the sum of elements in after nth iteration for below operation on array.
+
+   original array  4 6 8 3 6    sum = 27
+   iteration1      -2 -2 5 -3    sum = -2   (a1= a2-a1)
+
+   iteration2:     0  -7  8     sum= 1
+
+   iteration3:       7  -15     sum =-8 
+   
+   maximum product of subarray in given array of integers
+   
+    T9 dictionary
+	
+	Design a tree, in which a root can have unlimited children and write a code to print each level in separate level
+	
+	Print the anagrams present in a huge file (each line in file contains one word and you didn’t have any constraints like limited memory etc..) for a give string
+	
+Set 32
+
+Rotate an M*N matrix by 90 degrees. There was no function given in this case. Everything should be assumed by you only.
+
+Verify if the given password is valid/invalid; 
+1. must be 5-12 characters long 
+2. must contain atleast one number and one lowercase character 
+3. a sequence must not be followed by the same sequence (like 123123qs is invalid, 123qs123 is valid)
+
+
+Find the longest substring in a string with exactly 2 unique characters. The substring should not contain more than two different chars.
+
+So, aaaaabbaaa is a valid substring
+
+Also, ccaccccaccaca is a valid substring.
+
+Need to write code for the 3rd qs.
+
+Expected = O(n)
+
+ First I was asked to design a Data structure with O(1) insertion and O(1) search. I told about hashing. 
+ Then he told me to get a random number from the current list of numbers which have been inserted into my Ds. 
+ So I maintained an array storing pointers to the hash table.(Assume no Collision, he told so).
+ Then he said O(1) deletion also. I was stuck on this I was not able to make both deletion and getRandom in O(1).
+ After Some Discussion he moved on.
+ 
+An array is given which is first increasing and then decreasing. Find the pivot element. Need to take care of all the edge cases.
+
+Set 33
+
+Set 25 (Important)
+
+You have given a dictionary of an alien language in which letters are same as English letters but their order is different.
+Your task is sort the letters or give relationship b/w letters using that disctionary. note: the dictions may conatain 1 to n words.
+
+
+You are given a faulty binary serach tree in which only 2 nodes are misplaced(swapped their positions with each other). write a method
+that takes root of that BST and return the root of the corrected binary tree.
+
+
+Set 27
+
+1. There is a dictionary already implemented. Write a method, which takes input String without space, to prints all subsets of the input string which is present in dictionary.
+
+Example: Dictionary – a*
+………….Input- aaabaa
+………….Output- a,a,a,aa,aa,aaa,a,a,aa
+
+2. There is a dictionary already implemented. Write a method , which takes input String without space, to replace the characters from the strings which are not present in dictionary with -
+
+Example: Dictionary – a*
+………….Input- aaabaa
+………….Output- aaa_aa
+
+Interviewer was cool. Did not code properly (lots of bugs were in code), but gave good approach for first question. For second question solution sent in a mail.
+
+Set 29
+
+Write the complete code for rotating the given matrix.
+
+Print kth Lasgest node of the given tree.
+
+
+Topological Sorting
+
+Set 20
+Max profit in given set of days for a stock
+Max product
+Kadane's algorithm
+longest sub sequence which contains only unique characters
+A design question of chess int board[8][8] each value in the matrix represents a character. 1-9 number represents all whites and 11-19 represents all blacks.
+Given a pawn at (x,y) print all possible moves. Assume whites are index 0 and blacks are at index 7.
+
+Evaluate a mathematical expression 2*3+(5-6/2), something like this, with operator priority.
+
+Find jth element in ith row of a pascal triangle
+
+Set 10
+ Equilibrium point in array, equiPoint = ith index where Sum(Left array) = Sum(right Array).
+ Find each pair in BST, which adds up to given number k.
+ 
+ Set 23
+ 
+ Code for converting floating point decimal number to binary numbers. If the number cannot be converted, state so.
+ 
+ In a snake ladder game without snake and ladder :) . If some one is playing then we have to find probability to win the game of any player. Condition of winning is if you are on 96 and 5 comes in dice then you loose the game and If you are at 96 and 4 comes then only you will win the game. But you cant use dice more than Y time.
+
+I gave o(XY) Solution through DP. Where X is sum.
+
+Write the full code of finding a Name and phone in simple phone(In which abc all come on 1 using pressing speed and time duration) using sub string of name. 
+I gave 2 solution 1 using suffix tree and 2 using hash table and KMP Algorithm. He told me to write full code of  this problem using hash table and KMP Algorithm. I wrote the full and Manager was satisfied with my answer. 
+
+Set 22
+A singly liked list. Can have a loop. Detect it and find the size of list.
+
+Given an mxn matrix. Each entry is a room. Rooms containing “L” are locked. No one can enter a locked room. 
+Rooms with “G” are guarded rooms. 
+Distance of a room from a Guard is defined as the minimum number of rooms that are encountered for the Guard to reach that room 
+(Guard can move in all allowed 4 directions at max). 
+Find the room that is farthest from all guards. Expected time was O(mn).
+
+ Set 24
+ 
+ Reverse bits
+ 
+ Set 21
+ 
+  function to check syntax of opening and closing braces,  if you have k types of braces( ‘(‘ ‘[‘ ‘{‘ ,…. K types) All are of diff priority.
+  Print all valid combinations of k number of pairs of braces
+  
+  Return count of above combinations without using algorithm for printing them
+  
+  Set of strings are given in a dictionary order. The problem here is order is not as our alphabetical. 
+  It may be different. C may come before a,b, x may come before d,c. etc. You will have to find the order of characters by using given input.
+  
+ Set 15
+ 
+ Generate all valid permutations using ‘(‘ and ‘)’. Valid permutation is the general definition of valid sequence of the opening and closing brackets.
+ 
+ Set 16
+ Given a number with the number of digits in the range of 10-50, find the next higher permutation of the number.
+ 
+ Given an array of strings, you need to find the longest running sequence of a character among all possible permutations of the strings in the array.
+INPUT:
+ab
+ba
+aac
+
+Minimum spanning tree and topological sort .
+
+Set 17
+
+Boundary traversal of a tree
+Print the border nodes of the tree
+
+There are n number of points in a two dimensional plane. Find two nearest points
+There are n number of points in a two dimensional plane . Given a point find k nearest points to it.
+
+Set 18
+
+Infix/Prefix/Postfix
+Zero sum subarray
+Max product subarray
+
+Set 13
+
+Given an in-order traversal of a special binary tree having property that the node is always greater than its left and right child. Construct the tree and write code.
+
+Find the first occurrence of 1 in a sorted infinite binary tree.
+
+Given preorder and inorder traversals construct binary tree
+
+http://www.geeksforgeeks.org/level-order-traversal-in-spiral-form/
+
+http://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/
+
+Amazon has many visitors to its site. And it tracks what pages the customers visited, etc and other stuff.
+Make an efficient data structure for storing 3 days of information of all those customers who have visited site exactly two different days and searched more than 3 unique pages of the site in those 2 days.
+
+So whoever visited site exactly two days out of these three days and visited more then 3 unique pages should be in the contact list.
+
+Set 14:
+Important
+
+Set 12:
+
+Given two numbers and a binary tree, all elements in binary tree are distinct, write code to determine the shortest distance between the two nodes. 
+(unit distance between two adjacent nodes). Nodes don’t have parent pointer.
+
+Champagne pyramid
+
+Liked list is given as below (with elements as 1, 2 and 3), sort this in one pass.
+3->2->2->1->2->3->1
+
+An expression is given.
+[] can enclosed [], {} and ()
+{} can enclosed {}, ()
+() can enclosed only ()
+Check that brackets in the expression are valid or not according to enclosing condition and opening closing condition.
+Follow UP:
+Two arrays are given.
+One array contains symbols and second one contains expressions. Symbol array contains opening symbol at even index and closing symbols at odd index just after opening symbol. Index is starting from 0. Opening symbol at index i can only contain symbols from i to 2n-1, If there n pairs of symbols.
+Now check that expression in the expression array is valid or not.
+
+
+Set 11
+Maximum length palindrome in a string
+Find loops in linked list
+
+Write a program to find the difference between the sum of nodes at odd height and the sum of nodes at even height
+
+—Given an array of integers representing coin values and the sum required. find the number of coins required to get the sum
+
+Set 10
+
+ Two files containing large number, one in each. You have only fopen(), int read(fp), fclose(), fwrite(). Add these two numbers and write in third file with the help of given functions only.
+    Explained him the logic and he was okay with it.
+	
+	
+	 Print encoding for an Array.
+    Rules: consider BST made from given array. Let say number x is present in the BST and to reach x, If you go right print 1, if left then 0.
+    Now you are given an index i in the array A (so x = A[i]) and print the encoding without constructing BST to reach x
+    and without space with least time complexity.
+    I was not able to do it on the spot but after this interview, I got some free time and solved it and handed over papers to the interviewers. I liked this problem. It was little interesting.
+b. Find triplets in array so that a+b+c = k, k is given number along with array.
+c. Then moved to finding all possible pair set in an array. Mind the term SET. Take care of duplicates as well.
+
+Given array, find all possible sets of elements which add up to a given integer K.
+
+ Find the smallest substring which contains all the characters of the main string. 
+ 
+ We have a huge file with braces ‘()’ [just one type..] Find if they are balanced ..  (stacks wouldn’t work here because you will probably run out of memory storing the stack ..)
+
+ find frequency of numbers in array (max). ascending order
